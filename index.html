@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Beauty — Sua beleza. Seu momento.</title>
+  <meta name="description" content="Aura Beauty: cosméticos, maquiagens, perfumes e produtos de skincare desenvolvidos para realçar sua beleza natural e transformar sua rotina em um ritual.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aura Beauty — Sua beleza. Seu momento.">
+  <meta property="og:description" content="Descubra produtos premium de maquiagem, skincare e fragrâncias que celebram a sua autenticidade.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="header-container container">
+      <!-- Mobile Menu Trigger -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu de navegação">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo">
+        <span class="logo-main">AURA</span>
+        <span class="logo-sub">BEAUTY</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="nav-menu" id="navMenu">
+        <div class="mobile-menu-header">
+          <a href="#hero" class="brand-logo">
+            <span class="logo-main">AURA</span>
+            <span class="logo-sub">BEAUTY</span>
+          </a>
+          <button class="close-menu-btn" id="closeMenuBtn" aria-label="Fechar menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Início</a></li>
+          <li><a href="#produtos" class="nav-link" data-filter="maquiagem">Maquiagem</a></li>
+          <li><a href="#produtos" class="nav-link" data-filter="skincare">Skincare</a></li>
+          <li><a href="#produtos" class="nav-link" data-filter="perfumes">Perfumes</a></li>
+          <li><a href="#produtos" class="nav-link" data-filter="cuidados">Cuidados</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="action-btn" id="searchToggleBtn" aria-label="Abrir pesquisa">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="action-btn" id="favoritesBtn" aria-label="Ver favoritos">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="favoritesCount">0</span>
+        </button>
+        <button class="action-btn" id="cartBtn" aria-label="Ver sacola de compras">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Barra de Pesquisa Expansível -->
+    <div class="search-bar-drawer" id="searchDrawer">
+      <div class="container search-inner">
+        <input type="text" id="searchInput" placeholder="O que você está procurando hoje? Ex: Batom, Sérum..." aria-label="Campo de busca">
+        <button id="closeSearchBtn" aria-label="Fechar busca"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content fade-in">
+          <span class="hero-badge">BEAUTY ESSENTIALS &bull; NEW COLLECTION</span>
+          <h1 class="hero-title">Sua beleza.<br><em>Seu momento.</em></h1>
+          <p class="hero-subtitle">Produtos pensados para realçar sua beleza natural e transformar sua rotina diária em um verdadeiro ritual de bem-estar e sofisticação.</p>
+          <div class="hero-cta-group">
+            <a href="#produtos" class="btn btn-primary">Comprar agora <i class="fa-solid fa-arrow-right-long"></i></a>
+            <a href="#campanha" class="btn btn-outline">Explorar coleção</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <i class="fa-solid fa-leaf"></i> <span>Fórmulas Limpas</span>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-shield-cat"></i> <span>Cruelty-Free</span>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-truck-fast"></i> <span>Entrega Expressa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in">
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop" alt="Composição editorial com cosméticos Aura Beauty" class="hero-img-main" loading="eager">
+            <div class="hero-floating-card">
+              <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=300&auto=format&fit=crop" alt="Perfume Aura Essence">
+              <div class="floating-info">
+                <span>Lançamento exclusivo</span>
+                <strong>Aura Essence Eau de Parfum</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="categories-section section-padding">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <span class="section-tag">COLEÇÕES</span>
+          <h2 class="section-title">Encontre seus essenciais</h2>
+          <p class="section-description">Navegue pelas nossas categorias exclusivas criadas para atender cada detalhe da sua rotina.</p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Categoria 1 -->
+          <article class="category-card fade-in" data-category="maquiagem">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=700&auto=format&fit=crop" alt="Maquiagem Aura Beauty" loading="lazy">
+            </div>
+            <div class="category-overlay">
+              <span class="category-subtitle">Bases, batons e blushes</span>
+              <h3 class="category-name">MAKEUP</h3>
+              <span class="category-link">Ver produtos <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <!-- Categoria 2 -->
+          <article class="category-card fade-in" data-category="skincare">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=700&auto=format&fit=crop" alt="Skincare Aura Beauty" loading="lazy">
+            </div>
+            <div class="category-overlay">
+              <span class="category-subtitle">Séruns e hidratantes</span>
+              <h3 class="category-name">SKINCARE</h3>
+              <span class="category-link">Ver produtos <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <!-- Categoria 3 -->
+          <article class="category-card fade-in" data-category="perfumes">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=700&auto=format&fit=crop" alt="Fragranças e Perfumes Aura Beauty" loading="lazy">
+            </div>
+            <div class="category-overlay">
+              <span class="category-subtitle">Fragrâncias memoráveis</span>
+              <h3 class="category-name">FRAGRANCES</h3>
+              <span class="category-link">Ver produtos <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+
+          <!-- Categoria 4 -->
+          <article class="category-card fade-in" data-category="cuidados">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1608248597263-00079996576f?q=80&w=700&auto=format&fit=crop" alt="Cuidados corporais Aura Beauty" loading="lazy">
+            </div>
+            <div class="category-overlay">
+              <span class="category-subtitle">Ritual de banho e corpo</span>
+              <h3 class="category-name">BODY CARE</h3>
+              <span class="category-link">Ver produtos <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS EM DESTAQUE -->
+    <section class="products-section section-padding bg-alt" id="produtos">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <span class="section-tag">SELEÇÃO ESPECIAL</span>
+          <h2 class="section-title">Favoritos da Aura</h2>
+          <p class="section-description">Descubra os itens mais desejados da nossa comunidade de beleza.</p>
+        </div>
+
+        <!-- Filtros de produtos -->
+        <div class="products-filter-bar fade-in">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="maquiagem">Maquiagem</button>
+          <button class="filter-btn" data-filter="skincare">Skincare</button>
+          <button class="filter-btn" data-filter="perfumes">Perfumes</button>
+          <button class="filter-btn" data-filter="cuidados">Cuidados</button>
+        </div>
+
+        <!-- Grid de Produtos Dinâmico -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Injetado via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE CAMPANHA -->
+    <section class="campaign-section section-padding" id="campanha">
+      <div class="container">
+        <div class="campaign-wrapper fade-in">
+          <div class="campaign-image-grid">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" alt="Campanha The Glow Collection" class="campaign-img-large" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=500&auto=format&fit=crop" alt="Detalhe do sérum da coleção" class="campaign-img-small" loading="lazy">
+          </div>
+          <div class="campaign-content">
+            <span class="campaign-tag">EDITION LIMITÉE</span>
+            <h2 class="campaign-title">THE GLOW COLLECTION</h2>
+            <p class="campaign-text">Uma coleção criada especialmente para iluminar sua rotina diária. Texturas leves, alta pigmentação e ativos hidratantes que revelam o viço natural de dentro para fora.</p>
+            <div class="campaign-highlights">
+              <div class="highlight-box">
+                <span class="number">100%</span>
+                <span class="label">Vegano e Cruelty-Free</span>
+              </div>
+              <div class="highlight-box">
+                <span class="number">24h</span>
+                <span class="label">Hidratação Contínua</span>
+              </div>
+            </div>
+            <a href="#produtos" class="btn btn-primary" data-filter="skincare">Conhecer coleção</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAUTY QUIZ INTERATIVO -->
+    <section class="quiz-section section-padding bg-alt" id="quiz">
+      <div class="container">
+        <div class="quiz-card fade-in">
+          <div class="quiz-header text-center">
+            <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> RECOMENDAÇÃO PERSONALIZADA</span>
+            <h2 class="section-title">Descubra o que combina com você</h2>
+            <p class="section-description">Responda a 3 perguntas rápidas e receba uma seleção exclusiva de produtos para o seu estilo.</p>
+          </div>
+
+          <div class="quiz-body" id="quizBody">
+            <!-- Etapa 1 -->
+            <div class="quiz-step active" data-step="1">
+              <div class="quiz-progress-bar"><div class="progress" style="width: 33%;"></div></div>
+              <h3 class="step-question">1. O que você procura no momento?</h3>
+              <div class="quiz-options">
+                <button class="quiz-opt-btn" data-value="maquiagem"><i class="fa-solid fa-paintbrush"></i> Maquiagem</button>
+                <button class="quiz-opt-btn" data-value="skincare"><i class="fa-solid fa-droplet"></i> Skincare</button>
+                <button class="quiz-opt-btn" data-value="perfumes"><i class="fa-solid fa-spray-can"></i> Perfume</button>
+                <button class="quiz-opt-btn" data-value="cuidados"><i class="fa-solid fa-spa"></i> Cuidados Corporais</button>
+              </div>
+            </div>
+
+            <!-- Etapa 2 -->
+            <div class="quiz-step" data-step="2">
+              <div class="quiz-progress-bar"><div class="progress" style="width: 66%;"></div></div>
+              <h3 class="step-question">2. Qual estilo traduz melhor sua personalidade?</h3>
+              <div class="quiz-options">
+                <button class="quiz-opt-btn" data-value="natural"><i class="fa-solid fa-leaf"></i> Natural e Leve</button>
+                <button class="quiz-opt-btn" data-value="glow"><i class="fa-solid fa-sun"></i> Glow Iluminado</button>
+                <button class="quiz-opt-btn" data-value="elegante"><i class="fa-solid fa-gem"></i> Elegante e Clássico</button>
+                <button class="quiz-opt-btn" data-value="marcante"><i class="fa-solid fa-crown"></i> Marcante e Intenso</button>
+              </div>
+            </div>
+
+            <!-- Etapa 3 -->
+            <div class="quiz-step" data-step="3">
+              <div class="quiz-progress-bar"><div class="progress" style="width: 100%;"></div></div>
+              <h3 class="step-question">3. Qual o resultado principal que você deseja?</h3>
+              <div class="quiz-options">
+                <button class="quiz-opt-btn" data-value="praticidade"><i class="fa-solid fa-clock"></i> Praticidade diária</button>
+                <button class="quiz-opt-btn" data-value="luminosidade"><i class="fa-solid fa-sparkles"></i> Luminosidade radiante</button>
+                <button class="quiz-opt-btn" data-value="hidratacao"><i class="fa-solid fa-water"></i> Hidratação profunda</button>
+                <button class="quiz-opt-btn" data-value="destaque"><i class="fa-solid fa-eye"></i> Destaque e fixação</button>
+              </div>
+            </div>
+
+            <!-- Resultado -->
+            <div class="quiz-result" id="quizResult" style="display: none;">
+              <div class="text-center result-header">
+                <i class="fa-solid fa-circle-check result-icon"></i>
+                <h3 class="result-title">Sua seleção personalizada está pronta!</h3>
+                <p>Selecionamos estes 3 produtos perfeitos para o seu momento:</p>
+              </div>
+              <div class="quiz-recommended-grid" id="quizRecommendedGrid">
+                <!-- Recomendações injetadas via JS -->
+              </div>
+              <div class="text-center margin-top-2">
+                <button class="btn btn-outline" id="restartQuizBtn"><i class="fa-solid fa-rotate-right"></i> Refazer o Quiz</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROTINA SKINCARE -->
+    <section class="skincare-routine-section section-padding" id="sobre">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <span class="section-tag">RITUAL DIÁRIO</span>
+          <h2 class="section-title">Sua rotina começa aqui</h2>
+          <p class="section-description">Aprenda a aplicar a sequência correta de cuidados para maximizar a eficácia dos ativos.</p>
+        </div>
+
+        <div class="routine-steps-grid">
+          <!-- Passo 1 -->
+          <article class="routine-card fade-in">
+            <div class="step-number">01</div>
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop" alt="Passo 1 Limpar" loading="lazy">
+            </div>
+            <h3 class="step-title">Limpar</h3>
+            <p class="step-desc">Remova as impurezas acumuladas sem agredir a barreira de proteção natural da pele.</p>
+          </article>
+
+          <!-- Passo 2 -->
+          <article class="routine-card fade-in">
+            <div class="step-number">02</div>
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=500&auto=format&fit=crop" alt="Passo 2 Preparar" loading="lazy">
+            </div>
+            <h3 class="step-title">Preparar</h3>
+            <p class="step-desc">Acalme, reequilibre o pH e prepare os poros para receber a nutrição intensa.</p>
+          </article>
+
+          <!-- Passo 3 -->
+          <article class="routine-card fade-in">
+            <div class="step-number">03</div>
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=500&auto=format&fit=crop" alt="Passo 3 Hidratar" loading="lazy">
+            </div>
+            <h3 class="step-title">Hidratar</h3>
+            <p class="step-desc">Nutra em camadas profundas com o Sérum e o Hidratante Facial de toque aveludado.</p>
+          </article>
+
+          <!-- Passo 4 -->
+          <article class="routine-card fade-in">
+            <div class="step-number">04</div>
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1608248597263-00079996576f?q=80&w=500&auto=format&fit=crop" alt="Passo 4 Proteger" loading="lazy">
+            </div>
+            <h3 class="step-title">Proteger</h3>
+            <p class="step-desc">Sele todos os nutrientes na pele e proteja contra a ação do sol e luz azul.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA KIT -->
+    <section class="offer-section section-padding">
+      <div class="container">
+        <div class="offer-card fade-in">
+          <div class="offer-badge">BEST SELLER &bull; KIT EXCLUSIVO</div>
+          <div class="offer-grid">
+            <div class="offer-image">
+              <img src="https://images.unsplash.com/photo-1608248597263-00079996576f?q=80&w=800&auto=format&fit=crop" alt="Kit Seu Ritual Completo Aura Beauty" loading="lazy">
+            </div>
+            <div class="offer-info">
+              <h2 class="offer-title">Seu ritual completo</h2>
+              <p class="offer-desc">O trio essencial de cuidados faciais reunidos em uma caixa presenteável com valor promocional imperdível.</p>
+
+              <ul class="offer-items-list">
+                <li><i class="fa-solid fa-check"></i> Skin Glow Serum (30ml)</li>
+                <li><i class="fa-solid fa-check"></i> Hydra Cream (50g)</li>
+                <li><i class="fa-solid fa-check"></i> Rose Mist Toner (100ml)</li>
+              </ul>
+
+              <div class="offer-pricing">
+                <span class="old-price">De: R$ 219,70</span>
+                <span class="new-price">Por: R$ 169,90</span>
+                <span class="discount-badge">Economize R$ 49,80</span>
+              </div>
+
+              <button class="btn btn-primary btn-large" id="buyKitBtn">
+                <i class="fa-solid fa-bag-shopping"></i> Quero meu kit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials-section section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <span class="section-tag">COMUNIDADE AURA</span>
+          <h2 class="section-title">Elas amam a Aura</h2>
+          <p class="section-description">Confira o relato real de quem incorporou a Aura Beauty em sua rotina diária.</p>
+        </div>
+
+        <div class="carousel-container fade-in">
+          <button class="carousel-btn prev-btn" id="prevTestimonial" aria-label="Depoimento anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          
+          <div class="testimonials-slider" id="testimonialsSlider">
+            <!-- Depoimento 1 -->
+            <article class="testimonial-card active">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="review-text">"O Skin Glow Serum mudou completamente o aspecto da minha pele. O viço é imediato, não deixa oleoso e tem um perfume suave encantador."</p>
+              <div class="reviewer-info">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Mariana Silva" class="reviewer-avatar">
+                <div>
+                  <strong class="reviewer-name">Mariana Silva</strong>
+                  <span class="reviewer-role">Cliente verificada</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 2 -->
+            <article class="testimonial-card">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="review-text">"O batom Velvet Kiss dura o dia inteiro sem ressecar os lábios! A embalagem é de um luxo absurdo. Já comprei 3 cores diferentes!"</p>
+              <div class="reviewer-info">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop" alt="Camila Albuquerque" class="reviewer-avatar">
+                <div>
+                  <strong class="reviewer-name">Camila Albuquerque</strong>
+                  <span class="reviewer-role">Cliente verificada</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 3 -->
+            <article class="testimonial-card">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="review-text">"O Aura Essence é o meu novo perfume de assinatura. Sempre recebo elogios por onde passo. É chique, feminino e dura muito na pele."</p>
+              <div class="reviewer-info">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Beatriz Ferreira" class="reviewer-avatar">
+                <div>
+                  <strong class="reviewer-name">Beatriz Ferreira</strong>
+                  <span class="reviewer-role">Cliente verificada</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Depoimento 4 -->
+            <article class="testimonial-card">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="review-text">"Comprei o kit do ritual completo e fiquei impressionada com o carinho da embalagem e a rapidez da entrega. A experiência de compra é incrível!"</p>
+              <div class="reviewer-info">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&auto=format&fit=crop" alt="Juliana Costa" class="reviewer-avatar">
+                <div>
+                  <strong class="reviewer-name">Juliana Costa</strong>
+                  <span class="reviewer-role">Cliente verificada</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-btn next-btn" id="nextTestimonial" aria-label="Próximo depoimento"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="carousel-dots" id="carouselDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM GRID -->
+    <section class="instagram-section section-padding">
+      <div class="container">
+        <div class="section-header text-center fade-in">
+          <span class="section-tag">INSTAGRAM</span>
+          <h2 class="section-title">@aurabeauty</h2>
+          <p class="section-description">Siga o nosso perfil e compartilhe seu momento de beleza usando a hashtag #AuraMoments.</p>
+        </div>
+
+        <div class="instagram-grid fade-in">
+          <a href="#" class="insta-item" target="_blank" aria-label="Ver post no Instagram">
+            <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=500&auto=format&fit=crop" alt="Post Instagram 1" loading="lazy">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="#" class="insta-item" target="_blank" aria-label="Ver post no Instagram">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=500&auto=format&fit=crop" alt="Post Instagram 2" loading="lazy">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="#" class="insta-item" target="_blank" aria-label="Ver post no Instagram">
+            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=500&auto=format&fit=crop" alt="Post Instagram 3" loading="lazy">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="#" class="insta-item" target="_blank" aria-label="Ver post no Instagram">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=500&auto=format&fit=crop" alt="Post Instagram 4" loading="lazy">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="#" class="insta-item" target="_blank" aria-label="Ver post no Instagram">
+            <img src="https://images.unsplash.com/photo-1608248597263-00079996576f?q=80&w=500&auto=format&fit=crop" alt="Post Instagram 5" loading="lazy">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="#" class="insta-item" target="_blank" aria-label="Ver post no Instagram">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=500&auto=format&fit=crop" alt="Post Instagram 6" loading="lazy">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+        </div>
+
+        <div class="text-center margin-top-2 fade-in">
+          <a href="https://instagram.com" target="_blank" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> Seguir no Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section section-padding bg-dark text-light">
+      <div class="container">
+        <div class="newsletter-card fade-in text-center">
+          <span class="section-tag font-light">EXCLUSIVIDADES</span>
+          <h2 class="newsletter-title">Um pouco mais de beleza na sua caixa de entrada.</h2>
+          <p class="newsletter-text">Receba novidades, lançamentos em primeira mão e dicas exclusivas da Aura Beauty.</p>
+
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="input-group">
+              <input type="email" id="newsletterEmail" placeholder="Digite seu melhor e-mail..." aria-label="Digite seu e-mail" required>
+              <button type="submit" class="btn btn-primary">Quero receber</button>
+            </div>
+            <span class="error-msg" id="newsletterError">Por favor, insira um e-mail válido.</span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final-cta-section section-padding text-center">
+      <div class="container fade-in">
+        <h2 class="cta-heading">Realce aquilo que já existe em você.</h2>
+        <p class="cta-subheading">Descubra produtos feitos para acompanhar todos os seus momentos.</p>
+        <a href="#produtos" class="btn btn-primary btn-large">Explorar produtos <i class="fa-solid fa-arrow-right-long"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-main">AURA</span>
+          <span class="logo-sub">BEAUTY</span>
+        </a>
+        <p class="footer-slogan">"Sua beleza. Seu momento."</p>
+        <p class="footer-about">Cosméticos de alta performance criados para elevar sua rotina diária de cuidados e maquiagem.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Comprar</h4>
+        <ul class="footer-links">
+          <li><a href="#produtos" data-filter="maquiagem">Maquiagem</a></li>
+          <li><a href="#produtos" data-filter="skincare">Skincare</a></li>
+          <li><a href="#produtos" data-filter="perfumes">Perfumes</a></li>
+          <li><a href="#produtos" data-filter="cuidados">Cuidados</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Sobre</h4>
+        <ul class="footer-links">
+          <li><a href="#sobre">Nossa história</a></li>
+          <li><a href="#sobre">Ingredientes</a></li>
+          <li><a href="#sobre">Sustentabilidade</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Atendimento</h4>
+        <ul class="footer-links">
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Política de Entrega</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom text-center">
+      <p>&copy; 2026 Aura Beauty — Projeto demonstrativo desenvolvido pela DevRuby.</p>
+    </div>
+  </footer>
+
+  <!-- DRAWER DO CARRINHO / SACOLA -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Sacola de Compras">
+    <div class="cart-header">
+      <h3>Sua Sacola (<span id="cartDrawerCount">0</span>)</h3>
+      <button class="close-cart-btn" id="closeCartBtn" aria-label="Fechar sacola"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-body" id="cartItemsContainer">
+      <!-- Itens do carrinho via JS -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">R$ 0,00</strong>
+        </div>
+        <div class="summary-row">
+          <span>Frete</span>
+          <span class="free-shipping">Grátis</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <!-- MODAL DE PRODUTO / QUICK VIEW -->
+  <div class="modal-overlay" id="productModalOverlay">
+    <div class="modal-card" id="productModalCard">
+      <button class="close-modal-btn" id="closeModalBtn" aria-label="Fechar modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-grid" id="modalProductContent">
+        <!-- Conteúdo do produto injetado via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTAINER DE TOAST NOTIFICATIONS -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

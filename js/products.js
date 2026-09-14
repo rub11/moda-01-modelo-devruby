@@ -1,0 +1,162 @@
+/* ==========================================================================
+   AURA BEAUTY — CATÁLOGO DE PRODUTOS
+   ========================================================================== */
+
+const productsData = [
+  {
+    id: 1,
+    name: "Aura Glow Foundation",
+    category: "maquiagem",
+    price: 89.90,
+    rating: 5.0,
+    reviewsCount: 128,
+    shortDescription: "Base líquida iluminadora de cobertura leve a média com ácido hialurônico.",
+    fullDescription: "Desenvolvida com pigmentos refletores de luz e ácido hialurônico de baixo peso molecular, a Aura Glow Foundation proporciona um acabamento radiante, mantendo a pele hidratada e com aspecto fresco por até 12 horas.",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop",
+    badge: "BEST SELLER",
+    tags: ["glow", "natural", "luminosidade", "praticidade"]
+  },
+  {
+    id: 2,
+    name: "Velvet Kiss Lipstick",
+    category: "maquiagem",
+    price: 49.90,
+    rating: 5.0,
+    reviewsCount: 94,
+    shortDescription: "Batom matte confortável com textura aveludada e alta fixação.",
+    fullDescription: "O Batom Velvet Kiss entrega uma cor intensa e elegante em uma única aplicação. Sua fórmula enriquecida com manteiga de karité garante acabamento fosco confortável sem ressecar os lábios.",
+    image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=600&auto=format&fit=crop",
+    badge: "LANÇAMENTO",
+    tags: ["elegante", "marcante", "destaque", "praticidade"]
+  },
+  {
+    id: 3,
+    name: "Soft Blush Compact",
+    category: "maquiagem",
+    price: 59.90,
+    rating: 4.8,
+    reviewsCount: 76,
+    shortDescription: "Blush compacto com efeito natural e toque acetinado.",
+    fullDescription: "Confira às suas bochechas um tom saudável e luminoso com o Soft Blush Compact. Sua textura ultra-fina esfuma perfeitamente na pele sem marcar poros ou linhas de expressão.",
+    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=600&auto=format&fit=crop",
+    badge: "",
+    tags: ["natural", "glow", "luminosidade"]
+  },
+  {
+    id: 4,
+    name: "Silk Eyeliner & Mascara",
+    category: "maquiagem",
+    price: 65.00,
+    rating: 4.7,
+    reviewsCount: 52,
+    shortDescription: "Duo para olhar marcante com rímel definidor e delineador fluido.",
+    fullDescription: "O conjunto essencial para destacar o olhar. Delineador de precisão com pigmentação preta profunda combinado à máscara de cílios para volume dramático e curvatura duradoura.",
+    image: "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?q=80&w=600&auto=format&fit=crop",
+    badge: "EXCLUSIVO",
+    tags: ["marcante", "destaque"]
+  },
+  {
+    id: 5,
+    name: "Skin Glow Serum",
+    category: "skincare",
+    price: 79.90,
+    rating: 5.0,
+    reviewsCount: 210,
+    shortDescription: "Sérum facial concentrado com Vitamina C e Ácido Hialurônico.",
+    fullDescription: "Transforme sua pele com nosso sérum antioxidante de alta performance. Uniformiza o tom da pele, reduz os sinais de fadiga e devolve o brilho saudável natural desde as primeiras gotas.",
+    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
+    badge: "BEST SELLER",
+    tags: ["glow", "luminosidade", "hidratacao"]
+  },
+  {
+    id: 6,
+    name: "Hydra Cream",
+    category: "skincare",
+    price: 69.90,
+    rating: 4.9,
+    reviewsCount: 145,
+    shortDescription: "Hidratante facial nutritivo para pele viçosa e macia.",
+    fullDescription: "Formulado com ceramidas e esqualano vegetal, o Hydra Cream repara a barreira cutânea, promovendo retenção de umidade prolongada por 24 horas com rápida absorção.",
+    image: "https://images.unsplash.com/photo-1608248597263-00079996576f?q=80&w=600&auto=format&fit=crop",
+    badge: "",
+    tags: ["natural", "hidratacao", "praticidade"]
+  },
+  {
+    id: 7,
+    name: "Rose Mist Toner",
+    category: "skincare",
+    price: 45.00,
+    rating: 4.8,
+    reviewsCount: 88,
+    shortDescription: "Tônico e bruma facial refrescante de extrato de Rosas.",
+    fullDescription: "Acalme e reequilibre sua pele a qualquer hora do dia. A bruma facial Rose Mist combina hidrolato de rosas puro com niacinamida para reidratar e proteger contra agentes externos.",
+    image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=600&auto=format&fit=crop",
+    badge: "NOVO",
+    tags: ["natural", "praticidade", "hidratacao"]
+  },
+  {
+    id: 8,
+    name: "Botanical Cleansing Balm",
+    category: "skincare",
+    price: 55.00,
+    rating: 4.9,
+    reviewsCount: 64,
+    shortDescription: "Bálsamo de limpeza derretedor para remoção de maquiagem.",
+    fullDescription: "Derrete instantaneamente toda a maquiagem à prova d'água e protetor solar sem ressecar ou agredir. Deixa a pele perfeitamente limpa, macia e sedosa.",
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=600&auto=format&fit=crop",
+    badge: "",
+    tags: ["natural", "praticidade"]
+  },
+  {
+    id: 9,
+    name: "Aura Essence Eau de Parfum",
+    category: "perfumes",
+    price: 129.90,
+    rating: 5.0,
+    reviewsCount: 180,
+    shortDescription: "Fragrância feminina sofisticada com notas florais e amadeiradas.",
+    fullDescription: "Uma assinatura olfativa marcante e inesquecível. Aura Essence harmoniza notas de topo de bergamota e jasmim com um fundo envolvente de baunilha de Madagascar e sândalo.",
+    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop",
+    badge: "PREMIUM",
+    tags: ["elegante", "marcante", "destaque"]
+  },
+  {
+    id: 10,
+    name: "Velvet Noir Niche Fragrance",
+    category: "perfumes",
+    price: 149.90,
+    rating: 4.9,
+    reviewsCount: 42,
+    shortDescription: "Perfume denso e misterioso para ocasiões noturnas.",
+    fullDescription: "Uma fragrância intensa inspirada na sofisticação da noite. Com notas de orquídea negra, âmbar quente e patchouli, é a escolha perfeita para quem deseja marcar presença.",
+    image: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=600&auto=format&fit=crop",
+    badge: "EDIÇÃO LIMITADA",
+    tags: ["marcante", "elegante", "destaque"]
+  },
+  {
+    id: 11,
+    name: "Satin Body Oil & Glow",
+    category: "cuidados",
+    price: 75.00,
+    rating: 4.8,
+    reviewsCount: 95,
+    shortDescription: "Óleo corporal acetinado com partículas iluminadoras.",
+    fullDescription: "Proporcione um brilho doirado irresistível e hidratação profunda para o corpo. Fórmula não pegajosa infusionada com óleo de amêndoas e vitamina E.",
+    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=600&auto=format&fit=crop",
+    badge: "BEST SELLER",
+    tags: ["glow", "luminosidade", "hidratacao"]
+  },
+  {
+    id: 12,
+    name: "Velvet Body Scrub",
+    category: "cuidados",
+    price: 62.00,
+    rating: 4.7,
+    reviewsCount: 58,
+    shortDescription: "Esfoliante corporal com cristais de açúcar e óleos finos.",
+    fullDescription: "Renove a textura da pele do corpo com este esfoliante nutritivo. Remove células mortas suavemente enquanto envolve a pele em uma película protetora de maciez absoluta.",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop",
+    badge: "",
+    tags: ["natural", "hidratacao"]
+  }
+];
